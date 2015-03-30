@@ -7,6 +7,13 @@
 Установите kitchen-openstack командой 
 gem install kitchen openstack  (для сборки gem'а требуются make и g++)
 
+Сделайте клон репозитория с упражнениями http://git.stu.neva.ru/laboshinl/chef-examples.git
+В папке упражнениями [1..5] после выполнения задания можно запустить запуск рецепта и его проверку командой 
+
+```shell
+kitchen test
+```
+
 ### Команды
 
 Создать новую виртуальную машину в Openstack:
