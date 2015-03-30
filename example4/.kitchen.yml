@@ -1,20 +1,32 @@
 ---
 driver:
-  name: vagrant
+  name: openstack
+  openstack_username: labwork
+  openstack_api_key: mySuperSecret
+  openstack_auth_url: http://cloudlet.stu.neva.ru:5000/v2.0/tokens
+  openstack_tenant: student
+  openstack_network_name: local
+  username: centos
+  key_name: labwork  
+  private_key_path: ./labwork.pem
+  image_ref: CentOS-7-x86_64
+  flavor_ref: m1.tiny
+  floating_ip_pool: global-floating-pool
 
 provisioner:
-  name: chef_solo
+  name: chef_zero
+  require_chef_omnibus: true
 
 platforms:
   - name: centos-7.0
-    driver:
-      customize:
-        memory: 1024
-    run_list:
-      - recipe[yum-epel]
 
 suites:
   - name: default
     run_list:
+      - recipe[yum-epel]
       - recipe[example4::default]
     attributes: {}
+
+
+
+

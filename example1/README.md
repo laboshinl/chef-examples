@@ -1,26 +1,26 @@
 example1 Cookbook
 =================
 
-### Requirements
+### Требования
 
-* The NTP package must be installed
-* The NTP conf file must have the following entries:
+* Пакет NTP должен быть установлен
+* Файл /etc/ntp.conf должен содержать следующие строки:
 ```shell
 server 0.pool.ntp.org
 server 1.pool.ntp.org
 server 2.pool.ntp.org
 ```
-* The NTP service must be running and enabled to start on boot
+* Сервис NTP должен быть запущен и добавлен в автозагрузку
 
-### Instructions
+### Инструкция
 
-Configure the cookbook to handle all of the requirements and run
-test-kitchen to verify it was successful.
+Настройте кукбуку в соответствии с требованиями и запустите test-kitchen
+ что бы проверить результат:
 ```shell
 kitchen test
 ```
 
-### Help
+### Ссылки
 
 - File resource - https://docs.chef.io/resource_file.html
 - Package resource - https://docs.chef.io/resource_package.html

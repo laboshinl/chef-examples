@@ -1,30 +1,29 @@
 example5 Cookbook
 =================
 
-### Requirements
+### Требования
 
 * You must use the MySQL community cookbook
 * The MySQL instance assigned by chef should be named 'default'
-* The MySQL service should set the root password to 'changeme'
+* Сервису MySQL должен быть задан пароль 'changeme' для пользователя root
+* Конфигурационный файл innodb.cnf должен задавать значение innodb buffer pool равное
 * The MySQL innodb.cnf should dynamically set the innodb buffer pool
-  to use 1/4 of the system memory.
-* A MySQL config named innodb.cnf should be added to this server, you
-  may use the innodb.cnf file from example4 how ever it will need to
-  be modified to satisfy the innodb buffer pool requirement.
-* A database named 'postgresftw' should be created
-* A database user name 'allpg' should have all permissions to
-  'postgresftw'
+  1/4 системной памяти виртуальной машины. (Можно модифицировать шаблон из упражнения 4)
+* Должна быть создана база данных с именем 'postgresftw'
+* Пользователь базы данных 'allpg' должен иметь все права на доступ к 'postgresftw'
+  
 
-### Instructions
+### Инструкция
 
-Configure the cookbook to handle all of the requirements and run
-test-kitchen to verify it was successful.
+Настройте кукбуку в соответствии с требованиями и запустите test-kitchen
+ что бы проверить результат:
 ```shell
 kitchen test
 ```
 
-### Help
-This test uses Centos 7.0 instead of Ubuntu.
+### Ссылки
+
+В этом упражнении используется Centos 7.0 а не Ubuntu.
 
 - Ruby Basic Math - http://learnrubythehardway.org/book/ex3.html
 - MySQL Cookbook - https://github.com/chef-cookbooks/mysql

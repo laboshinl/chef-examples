@@ -1,9 +1,21 @@
 ---
 driver:
-  name: vagrant
+  name: openstack
+  openstack_username: labwork
+  openstack_api_key: mySuperSecret
+  openstack_auth_url: http://cloudlet.stu.neva.ru:5000/v2.0/tokens
+  openstack_tenant: student
+  openstack_network_name: local
+  username: ubuntu
+  key_name: labwork  
+  private_key_path: ./labwork.pem
+  image_ref: ubuntu-14.04-amd64
+  flavor_ref: m1.tiny
+  floating_ip_pool: global-floating-pool
 
 provisioner:
-  name: chef_solo
+  name: chef_zero
+  require_chef_omnibus: true
 
 platforms:
   - name: ubuntu-14.04
@@ -23,3 +35,5 @@ suites:
         ]
       }
     }
+
+

@@ -3,35 +3,32 @@ example3 Cookbook
 
 ### Requirements
 
-* Nginx must be installed
+* Nginx должен быть установлен
 
-* https://github.com/jarosser06/magic should be cloned to
+* Репозиторий https://github.com/jarosser06/magic должен быть клонирован в папку
   /var/www/magic
 
-* Ensure /etc/nginx/sites-available/magic.conf is created and
-  populated correctly by using the pre-written magic.conf.erb
-  in the templates directory
+* Файл /etc/nginx/sites-available/magic.conf должен быть сгенерирован из готового шаблона 
+  magic.conf.erb 
 
-* Make sure the default Nginx site is disabled and the magic.conf
-  site is enabled.
+* Убедитесь что страница по умолчанию выключена, а сайт magic.conf включен
 
-* Make sure Nginx is reloaded whenever /etc/nginx/sites-available/magic.conf
-  is updated
+* Убедитесь, что сервис Nginx перезапускается при внесении изменений в файл 
+  /etc/nginx/sites-available/magic.conf
 
-### Instructions
+### Инструкция
 
-Configure the cookbook to handle all of the requirements and run
-test-kitchen to verify it was successful.
+Настройте кукбуку в соответствии с требованиями и запустите test-kitchen
+ что бы проверить результат:
 ```shell
 kitchen test
 ```
 
-### Help
-Hint: You may use the Community Nginx cookbook
+### Подсказки
+1. Можно использовать готовую кукбуку Nginx
+2. Убедитесь, что Вы установили git прежде чем ипользовать его
 
-Another Hint: Make sure git is installed before you try to use
-it.
-
+### Ссылки
 - Git resource - https://docs.chef.io/resource_git.html
 - Nginx resource - https://supermarket.chef.io/cookbooks/nginx
 - When resources are updated they can notify other resources to
