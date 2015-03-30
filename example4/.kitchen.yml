@@ -9,7 +9,7 @@ driver:
   username: centos
   key_name: labwork  
   private_key_path: ./labwork.pem
-  image_ref: CentOS-7-x86_64
+  image_ref: CentOS-6-x86_64
   flavor_ref: m1.tiny
   floating_ip_pool: global-floating-pool
 
@@ -18,7 +18,7 @@ provisioner:
   require_chef_omnibus: true
 
 platforms:
-  - name: centos-7.0
+  - name: centos-6.5
 
 suites:
   - name: default

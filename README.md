@@ -23,3 +23,5 @@ kitchen login
 - Chef documentation - https://docs.chef.io/index.html
 - Test Kitchen - http://kitchen.ci
 - Berkshelf - http://berkshelf.com
+
+### Вопросы по выполнению задания можно присылать на почту laboshinl@gmail.com
