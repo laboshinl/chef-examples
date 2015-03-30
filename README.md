@@ -1,37 +1,25 @@
-# chef-examples
+# Лабораторная работа
 
-The early examples do use Ubuntu 14.04 to test however you
-should get used to writing the recipes distro agnostic because
-the distro may change.
+### Настройка рабочего окружения
 
-### Setup
-Set up a basic Chef workstation using Ruby or ChefDK.  Make sure Vagrant, Virtualbox, 
-and Berkshelf is installed and working correctly.
+Скачайте Chef-dk по ссылке https://downloads.chef.io/chef-dk/
+Установите скачанный пакет (dpkg -i)
+Установите kitchen-openstack командой 
+gem install kitchen openstack  (для сборки gem'а требуются make и g++)
 
-The following script might prove useful:
-https://github.com/jarosser06/chef_tools_install
+### Команды
 
-Once everything is set up change directory to the first excercise and begin hacking!!
-
-### Help
-If you don't know where to begin with an excercise try provisioning the
-server first, solve the problem manually, and then create the configuration.
-
-Converge the new server using the following command:
+Создать новую виртуальную машину в Openstack:
 ```shell
 kitchen converge
 ```
 
-This will run Chef and handle anything already added to the cookbook
-and then leave the box running to allow you to login.
-
-To login to the box use the following command.
+Для того что бы залогиниться в созданную машину.
 ```shell
 kitchen login
 ```
 
-### Documentation
+### Документация
 - Chef documentation - https://docs.chef.io/index.html
 - Test Kitchen - http://kitchen.ci
-- Vagrant - https://www.vagrantup.com
 - Berkshelf - http://berkshelf.com
