@@ -7,7 +7,7 @@ describe package('ntp') do
 end
 
 ntp_servers = []
-3.times do |i|
+2.times do |i|
   ntp_servers.push "server #{i}.pool.ntp.org"
 end
 

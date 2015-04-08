@@ -1,0 +1,29 @@
+I, [2015-03-30T12:24:50.308083 #32307]  INFO -- Kitchen: -----> Starting Kitchen (v1.2.1)
+E, [2015-03-30T12:24:50.308376 #32307] ERROR -- Kitchen: ------Exception-------
+E, [2015-03-30T12:24:50.308423 #32307] ERROR -- Kitchen: Class: Kitchen::UserError
+E, [2015-03-30T12:24:50.308447 #32307] ERROR -- Kitchen: Message: Kitchen YAML file /home/laboshinl/chef-examples/.kitchen.yml does not exist.
+E, [2015-03-30T12:24:50.308468 #32307] ERROR -- Kitchen: ------Backtrace-------
+E, [2015-03-30T12:24:50.308487 #32307] ERROR -- Kitchen: /home/laboshinl/.gem/ruby/gems/test-kitchen-1.2.1/lib/kitchen/loader/yaml.rb:74:in `read'
+E, [2015-03-30T12:24:50.308507 #32307] ERROR -- Kitchen: /home/laboshinl/.gem/ruby/gems/test-kitchen-1.2.1/lib/kitchen/config.rb:78:in `data'
+E, [2015-03-30T12:24:50.308527 #32307] ERROR -- Kitchen: /home/laboshinl/.gem/ruby/gems/test-kitchen-1.2.1/lib/kitchen/config.rb:66:in `suites'
+E, [2015-03-30T12:24:50.308546 #32307] ERROR -- Kitchen: /home/laboshinl/.gem/ruby/gems/test-kitchen-1.2.1/lib/kitchen/config.rb:90:in `filter_instances'
+E, [2015-03-30T12:24:50.308565 #32307] ERROR -- Kitchen: /home/laboshinl/.gem/ruby/gems/test-kitchen-1.2.1/lib/kitchen/config.rb:72:in `build_instances'
+E, [2015-03-30T12:24:50.308584 #32307] ERROR -- Kitchen: /home/laboshinl/.gem/ruby/gems/test-kitchen-1.2.1/lib/kitchen/config.rb:52:in `instances'
+E, [2015-03-30T12:24:50.308604 #32307] ERROR -- Kitchen: /home/laboshinl/.gem/ruby/gems/test-kitchen-1.2.1/lib/kitchen/command.rb:64:in `get_filtered_instances'
+E, [2015-03-30T12:24:50.308623 #32307] ERROR -- Kitchen: /home/laboshinl/.gem/ruby/gems/test-kitchen-1.2.1/lib/kitchen/command.rb:85:in `parse_subcommand'
+E, [2015-03-30T12:24:50.308642 #32307] ERROR -- Kitchen: /home/laboshinl/.gem/ruby/gems/test-kitchen-1.2.1/lib/kitchen/command/action.rb:37:in `block in call'
+E, [2015-03-30T12:24:50.308661 #32307] ERROR -- Kitchen: /usr/share/ruby/benchmark.rb:281:in `measure'
+E, [2015-03-30T12:24:50.308680 #32307] ERROR -- Kitchen: /home/laboshinl/.gem/ruby/gems/test-kitchen-1.2.1/lib/kitchen/command/action.rb:36:in `call'
+E, [2015-03-30T12:24:50.308711 #32307] ERROR -- Kitchen: /home/laboshinl/.gem/ruby/gems/test-kitchen-1.2.1/lib/kitchen/cli.rb:47:in `perform'
+E, [2015-03-30T12:24:50.308731 #32307] ERROR -- Kitchen: /home/laboshinl/.gem/ruby/gems/test-kitchen-1.2.1/lib/kitchen/cli.rb:118:in `block (2 levels) in <class:CLI>'
+E, [2015-03-30T12:24:50.308750 #32307] ERROR -- Kitchen: /usr/local/share/gems/gems/thor-0.19.1/lib/thor/command.rb:27:in `run'
+E, [2015-03-30T12:24:50.308770 #32307] ERROR -- Kitchen: /usr/local/share/gems/gems/thor-0.19.1/lib/thor/invocation.rb:126:in `invoke_command'
+E, [2015-03-30T12:24:50.308789 #32307] ERROR -- Kitchen: /home/laboshinl/.gem/ruby/gems/test-kitchen-1.2.1/lib/kitchen/cli.rb:233:in `invoke_task'
+E, [2015-03-30T12:24:50.308808 #32307] ERROR -- Kitchen: /usr/local/share/gems/gems/thor-0.19.1/lib/thor.rb:359:in `dispatch'
+E, [2015-03-30T12:24:50.308828 #32307] ERROR -- Kitchen: /usr/local/share/gems/gems/thor-0.19.1/lib/thor/base.rb:440:in `start'
+E, [2015-03-30T12:24:50.308847 #32307] ERROR -- Kitchen: /home/laboshinl/.gem/ruby/gems/test-kitchen-1.2.1/bin/kitchen:13:in `block in <top (required)>'
+E, [2015-03-30T12:24:50.308866 #32307] ERROR -- Kitchen: /home/laboshinl/.gem/ruby/gems/test-kitchen-1.2.1/lib/kitchen/errors.rb:81:in `with_friendly_errors'
+E, [2015-03-30T12:24:50.308886 #32307] ERROR -- Kitchen: /home/laboshinl/.gem/ruby/gems/test-kitchen-1.2.1/bin/kitchen:13:in `<top (required)>'
+E, [2015-03-30T12:24:50.308905 #32307] ERROR -- Kitchen: /home/laboshinl/bin/kitchen:23:in `load'
+E, [2015-03-30T12:24:50.308924 #32307] ERROR -- Kitchen: /home/laboshinl/bin/kitchen:23:in `<main>'
+E, [2015-03-30T12:24:50.308943 #32307] ERROR -- Kitchen: ----------------------

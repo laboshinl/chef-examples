@@ -2,7 +2,7 @@
 # Cookbook Name:: example2
 # Recipe:: default
 #
-# Copyright 2015, Jim Rosser
+# Copyright 2015, Leonid Laboshin
 #
 # Create the /etc/ntp.conf file using the
 # template Chef resource and populate it with the array of servers
