@@ -1,32 +1,28 @@
 ---
 driver:
-  name: openstack
-  openstack_username: labwork
-  openstack_api_key: mySuperSecret
-  openstack_auth_url: http://cloudlet.stu.neva.ru:5000/v2.0/tokens
-  openstack_tenant: student
-  openstack_network_name: local
-  username: centos
-  key_name: labwork  
-  private_key_path: ./labwork.pem
-  image_ref: CentOS-6-x86_64
-  flavor_ref: m1.tiny
-  floating_ip_pool: global-floating-pool
-
+  name: docker
+  use_sudo: false
+  privileged: true
 provisioner:
+  #name: puppet_apply
   name: chef_zero
+  mainfests_path: manifests
+  modules_path: modules
+  require_chef_for_busser: true
   require_chef_omnibus: true
-
+  require_puppet_collections: false
+  require_puppet_omnibus: false
+  require_puppet_repo: false
+  update_package_repos: false
 platforms:
-  - name: centos-6.5
-
+  - name: ubuntu
+    driver_config:
+     image: laboshin/puppet
+     hostname: chef.sucks
 suites:
   - name: default
     run_list:
       - recipe[yum-epel]
       - recipe[example4::default]
     attributes: {}
-
-
-
-
+      

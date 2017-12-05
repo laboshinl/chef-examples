@@ -4,8 +4,8 @@
 
 Скачайте Chef-dk по ссылке https://downloads.chef.io/chef-dk/
 Установите скачанный пакет (dpkg -i)
-Установите kitchen-openstack командой 
-gem install kitchen openstack  (для сборки gem'а требуются make и g++)
+Установите docker и test-kitchen 
+gem install kitchen-docker  (для сборки gem'а требуются make и g++)
 
 Сделайте клон репозитория с упражнениями http://git.stu.neva.ru/laboshinl/chef-examples.git
 В папке упражнениями [1..5] после выполнения задания можно запустить запуск рецепта и его проверку командой 
@@ -16,7 +16,7 @@ kitchen test
 
 ### Команды
 
-Создать новую виртуальную машину в Openstack:
+Создать новую виртуальную машину:
 ```shell
 kitchen converge
 ```

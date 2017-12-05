@@ -15,7 +15,7 @@ describe file('/etc/ntp.conf') do
   it { should contain ntp_servers.sample }
 end
 
-describe service('ntp') do
+describe service('ntpd') do
   it { should be_enabled }
   it { should be_running }
 end
