@@ -1,0 +1,33 @@
+---
+driver:
+  name: docker
+  use_sudo: false
+  privileged: true
+provisioner:
+  name: puppet_apply
+  #name: chef_zero
+  mainfests_path: manifests
+  modules_path: modules
+  require_chef_for_busser: true
+  require_chef_omnibus: true
+  require_puppet_collections: false
+  require_puppet_omnibus: false
+  require_puppet_repo: false
+  update_package_repos: false
+platforms:
+  - name: centos
+    driver_config:
+     run_command: /usr/sbin/init
+     cap_add:
+       - SYS_ADMIN
+     volume:
+       - /sys/fs/cgroup:/sys/fs/cgroup:ro
+       - /run
+     image: laboshin/puppet
+     hostname: puppet.sucks
+suites:
+  - name: default
+    manifests: init.pp
+    verifier:
+      name: busser
+      
